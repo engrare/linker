@@ -27,6 +27,8 @@
 <body>
 aktarma yapılıyor...
   <script>
-
+var url = $(location).attr("href");
+var url_info = url.slice(url.indexOf('?'), url.length);
+console.log(url_info);
 </script>
 </html>
