@@ -27,8 +27,13 @@
 <body>
 aktarma yapılıyor...
   <script>
+var url_infos = {
+	"defi": "https://docs.google.com/document/d/1fr7Iy6DrBRy9X0AN8159UN5MBjwZHlz4/edit?usp=drive_link&ouid=112623144916725962554&rtpof=true&sd=true",
+	
+};
 var url = $(location).attr("href");
 var url_info = url.slice(url.indexOf('?'), url.length);
-console.log(url_info);
+window.location.replace(url_infos.defi);
+
 </script>
 </html>
