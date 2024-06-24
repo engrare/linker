@@ -27,13 +27,27 @@
 <body>
 aktarma yapılıyor...
   <script>
-var url_infos = {
-	"defi": "https://docs.google.com/document/d/1fr7Iy6DrBRy9X0AN8159UN5MBjwZHlz4/edit?usp=drive_link&ouid=112623144916725962554&rtpof=true&sd=true",
-	
+var url_info_json = {
+	  "linkarr": [
+  {
+    "name": "defi",
+    "link": "https://docs.google.com/document/d/1fr7Iy6DrBRy9X0AN8159UN5MBjwZHlz4/edit?usp=drive_link&ouid=112623144916725962554&rtpof=true&sd=true"
+  },
+      {
+    "name": "dagitim",
+    "link": "https://docs.google.com/spreadsheets/d/1sD2A_l9-665K0qDe3T1b6U94yRtNHKFl/edit?usp=sharing&ouid=109971329261158584647&rtpof=true&sd=true"
+  }
+ ]
 };
 var url = $(location).attr("href");
 var url_info = url.slice(url.indexOf('?'), url.length);
-window.location.replace(url_infos.defi);
+for(var i = 0; i < url_info_json.linkarr.length; i++) {
+	if(url_info_json.linkarr[i].name == url_info) {
+		window.location.replace(url_info_json.linkarr[i].link);
+		break;
+	}
+}
+
 
 </script>
 </html>
