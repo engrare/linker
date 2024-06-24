@@ -25,7 +25,7 @@
 </head>
 
 <body>
-aktarma yapılıyor...
+<p class="aktarma_yazisi">aktarma yapılıyor...</p>
   <script>
 var url_info_json = {
 	  "linkarr": [
@@ -47,7 +47,7 @@ for(var i = 0; i < url_info_json.linkarr.length; i++) {
 		break;
 	}
 }
-
+setTimeout(function() {$(".aktarma_yazisi").text("Aktarma Hatası. Farklı bir aktarma isteği giriniz.")}, 3000);
 
 </script>
 </html>
