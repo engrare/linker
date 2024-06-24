@@ -40,7 +40,7 @@ var url_info_json = {
  ]
 };
 var url = $(location).attr("href");
-var url_info = url.slice(url.indexOf('?'), url.length);
+var url_info = url.slice(url.indexOf('?')+1, url.length);
 for(var i = 0; i < url_info_json.linkarr.length; i++) {
 	if(url_info_json.linkarr[i].name == url_info) {
 		window.location.replace(url_info_json.linkarr[i].link);
